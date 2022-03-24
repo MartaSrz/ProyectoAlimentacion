@@ -4,7 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-public class Alimento {
+public class CalculoNutritivo {
 
 	private JFrame frame;
 
@@ -15,7 +15,7 @@ public class Alimento {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Alimento window = new Alimento();
+					CalculoNutritivo window = new CalculoNutritivo();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -27,7 +27,7 @@ public class Alimento {
 	/**
 	 * Create the application.
 	 */
-	public Alimento() {
+	public CalculoNutritivo() {
 		initialize();
 	}
 
