@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JButton;
 import javax.swing.border.LineBorder;
+import java.awt.Dimension;
 
 public class CalculoNutritivo {
 
@@ -81,12 +82,12 @@ public class CalculoNutritivo {
 		
 		JLabel lblHidratosDeCarbono = new JLabel("Hidratos de carbono");
 		lblHidratosDeCarbono.setFont(new Font("Dialog", Font.PLAIN, 16));
-		lblHidratosDeCarbono.setBounds(85, 297, 192, 32);
+		lblHidratosDeCarbono.setBounds(49, 314, 192, 32);
 		frame.getContentPane().add(lblHidratosDeCarbono);
 		
 		JLabel lblAzcar = new JLabel("Azúcar");
 		lblAzcar.setFont(new Font("Dialog", Font.PLAIN, 16));
-		lblAzcar.setBounds(49, 341, 192, 32);
+		lblAzcar.setBounds(85, 341, 192, 32);
 		frame.getContentPane().add(lblAzcar);
 		
 		JLabel lblProtenas = new JLabel("Proteínas");
@@ -136,7 +137,7 @@ public class CalculoNutritivo {
 		frame.getContentPane().add(panel);
 		
 		JLabel lblConsejoDelDia = new JLabel("Consejo del dia");
-		lblConsejoDelDia.setBounds(333, 670, 376, 260);
+		lblConsejoDelDia.setBounds(333, 670, 376, 246);
 		frame.getContentPane().add(lblConsejoDelDia);
 		
 		JLabel lblcuntaCantidadHas = new JLabel("¿Cuánta cantidad has consumido?");
@@ -144,10 +145,10 @@ public class CalculoNutritivo {
 		lblcuntaCantidadHas.setBounds(49, 79, 280, 32);
 		frame.getContentPane().add(lblcuntaCantidadHas);
 		
-		JSpinner spinner = new JSpinner();
-		spinner.setFont(new Font("Dialog", Font.BOLD, 16));
-		spinner.setBounds(388, 79, 88, 32);
-		frame.getContentPane().add(spinner);
+		JSpinner n_veces = new JSpinner();
+		n_veces.setFont(new Font("Dialog", Font.BOLD, 16));
+		n_veces.setBounds(388, 79, 88, 32);
+		frame.getContentPane().add(n_veces);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -168,5 +169,127 @@ public class CalculoNutritivo {
 		separator_2.setForeground(Color.BLACK);
 		separator_2.setBounds(38, 648, 678, 10);
 		frame.getContentPane().add(separator_2);
+		
+		JLabel lblValor_1 = new JLabel("0");
+		lblValor_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblValor_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblValor_1.setBounds(488, 169, 192, 32);
+		frame.getContentPane().add(lblValor_1);
+		
+		JLabel lblEnergtico_1 = new JLabel("0");
+		lblEnergtico_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblEnergtico_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblEnergtico_1.setBounds(488, 197, 192, 32);
+		frame.getContentPane().add(lblEnergtico_1);
+		
+		JLabel lblGrasas_1 = new JLabel("0");
+		lblGrasas_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblGrasas_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblGrasas_1.setBounds(488, 244, 192, 32);
+		frame.getContentPane().add(lblGrasas_1);
+		
+		JLabel lblSaturadas_1 = new JLabel("0");
+		lblSaturadas_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblSaturadas_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblSaturadas_1.setBounds(524, 270, 192, 32);
+		frame.getContentPane().add(lblSaturadas_1);
+		
+		JLabel lblHidratosDeCarbono_1 = new JLabel("0");
+		lblHidratosDeCarbono_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblHidratosDeCarbono_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblHidratosDeCarbono_1.setBounds(488, 314, 192, 32);
+		frame.getContentPane().add(lblHidratosDeCarbono_1);
+		
+		JLabel lblAzcar_1 = new JLabel("0");
+		lblAzcar_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblAzcar_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblAzcar_1.setBounds(524, 341, 192, 32);
+		frame.getContentPane().add(lblAzcar_1);
+		
+		JLabel lblProtenas_1 = new JLabel("0");
+		lblProtenas_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblProtenas_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblProtenas_1.setBounds(488, 385, 192, 32);
+		frame.getContentPane().add(lblProtenas_1);
+		
+		JLabel lblSal_1 = new JLabel("0");
+		lblSal_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblSal_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblSal_1.setBounds(488, 428, 192, 32);
+		frame.getContentPane().add(lblSal_1);
+		
+		JLabel lblCalcio_1 = new JLabel("0");
+		lblCalcio_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblCalcio_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblCalcio_1.setBounds(488, 472, 192, 32);
+		frame.getContentPane().add(lblCalcio_1);
+		
+		JLabel lblVitaminas_1 = new JLabel("0");
+		lblVitaminas_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblVitaminas_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblVitaminas_1.setBounds(488, 516, 192, 32);
+		frame.getContentPane().add(lblVitaminas_1);
+		
+		JLabel lblOmega_1 = new JLabel("0");
+		lblOmega_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblOmega_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblOmega_1.setBounds(488, 560, 192, 32);
+		frame.getContentPane().add(lblOmega_1);
+		
+		JLabel lblHierro_1 = new JLabel("0");
+		lblHierro_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblHierro_1.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblHierro_1.setBounds(488, 604, 192, 32);
+		frame.getContentPane().add(lblHierro_1);
+		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setForeground(Color.LIGHT_GRAY);
+		separator_1.setBounds(49, 233, 660, 10);
+		frame.getContentPane().add(separator_1);
+		
+		JSeparator separator_3 = new JSeparator();
+		separator_3.setForeground(Color.LIGHT_GRAY);
+		separator_3.setBounds(49, 305, 660, 10);
+		frame.getContentPane().add(separator_3);
+		
+		JSeparator separator_4 = new JSeparator();
+		separator_4.setForeground(Color.LIGHT_GRAY);
+		separator_4.setBounds(49, 376, 660, 10);
+		frame.getContentPane().add(separator_4);
+		
+		JSeparator separator_3_1 = new JSeparator();
+		separator_3_1.setForeground(Color.LIGHT_GRAY);
+		separator_3_1.setBounds(49, 420, 667, 10);
+		frame.getContentPane().add(separator_3_1);
+		
+		JSeparator separator_4_1 = new JSeparator();
+		separator_4_1.setForeground(Color.LIGHT_GRAY);
+		separator_4_1.setBounds(49, 505, 667, 10);
+		frame.getContentPane().add(separator_4_1);
+		
+		JSeparator separator_4_1_1 = new JSeparator();
+		separator_4_1_1.setForeground(Color.LIGHT_GRAY);
+		separator_4_1_1.setBounds(49, 463, 667, 10);
+		frame.getContentPane().add(separator_4_1_1);
+		
+		JSeparator separator_4_1_2 = new JSeparator();
+		separator_4_1_2.setForeground(Color.LIGHT_GRAY);
+		separator_4_1_2.setBounds(49, 549, 667, 10);
+		frame.getContentPane().add(separator_4_1_2);
+		
+		JSeparator separator_4_1_3 = new JSeparator();
+		separator_4_1_3.setForeground(Color.LIGHT_GRAY);
+		separator_4_1_3.setBounds(49, 594, 667, 10);
+		frame.getContentPane().add(separator_4_1_3);
+		
+		JLabel lblEscogeUnAlimento_1 = new JLabel("Escoge un alimento:");
+		lblEscogeUnAlimento_1.setFont(new Font("Dialog", Font.BOLD, 18));
+		lblEscogeUnAlimento_1.setBounds(731, 494, 192, 32);
+		frame.getContentPane().add(lblEscogeUnAlimento_1);
+		
+		JSeparator separator_5 = new JSeparator();
+		separator_5.setForeground(Color.BLACK);
+		separator_5.setBounds(927, 23, 522, 10);
+		frame.getContentPane().add(separator_5);
 	}
 }
