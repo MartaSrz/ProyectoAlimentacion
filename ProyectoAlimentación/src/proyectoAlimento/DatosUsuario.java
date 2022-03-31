@@ -153,7 +153,7 @@ public class DatosUsuario {
 			public void actionPerformed(ActionEvent arg0) {
 	
 			/**
-			 * //Al hacerle click al botón Restablecer, ponemos el txtNombre a nulo, 
+			 * //Al hacer click al botón 'Restablecer', ponemos el txtNombre a nulo, 
 			 * los spinners a sus valores por defecto y por último, habiendo creado el grupo de botones, 
 			 * hacemos el clearSelection(); para que no aparezca ningún RadioButton marcado.	
 			 */
