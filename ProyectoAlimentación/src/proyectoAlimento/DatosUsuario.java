@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.JComboBox;
 import javax.swing.JSpinner;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -79,7 +80,7 @@ public class DatosUsuario {
 		lblSexo.setBounds(121, 203, 60, 17);
 		frame.getContentPane().add(lblSexo);
 		
-		JRadioButton rdbtnMujer = new JRadioButton("Mujer");
+		JRadioButton rdbtnMujer = new JRadioButton("Mujer");		
 		rdbtnMujer.setFont(new Font("Dialog", Font.PLAIN, 16));
 		rdbtnMujer.setBounds(165, 228, 130, 25);
 		frame.getContentPane().add(rdbtnMujer);
@@ -89,20 +90,31 @@ public class DatosUsuario {
 		rdbtnHombre.setBounds(165, 264, 130, 25);
 		frame.getContentPane().add(rdbtnHombre);
 		
+		/**
+		 * Creación de Grupo de Botones.
+		 * Añadimos los RadioButton al grupo creado anteriormente
+		 */
+		
+		ButtonGroup grupoRadioBotones = new ButtonGroup(); 
+		
+		grupoRadioBotones.add(rdbtnMujer); 
+		grupoRadioBotones.add(rdbtnHombre); 
+		
 		JLabel lblEdad = new JLabel("Edad:");
 		lblEdad.setFont(new Font("Dialog", Font.PLAIN, 16));
 		lblEdad.setBounds(121, 315, 60, 17);
 		frame.getContentPane().add(lblEdad);
 		
-		JSpinner spinner = new JSpinner();
-		spinner.setFont(new Font("Dialog", Font.PLAIN, 16));
-		spinner.setBounds(165, 342, 91, 22);
-		frame.getContentPane().add(spinner);
+		JSpinner spinner_anyos = new JSpinner();
+		spinner_anyos.setValue(18);
+        spinner_anyos.setFont(new Font("Dialog", Font.PLAIN, 16));
+		spinner_anyos.setBounds(165, 342, 91, 22);
+		frame.getContentPane().add(spinner_anyos);
 		
-		JLabel lblAos = new JLabel("años");
-		lblAos.setFont(new Font("Dialog", Font.PLAIN, 16));
-		lblAos.setBounds(265, 345, 60, 17);
-		frame.getContentPane().add(lblAos);
+		JLabel lblAnyos = new JLabel("años");
+		lblAnyos.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblAnyos.setBounds(265, 345, 60, 17);
+		frame.getContentPane().add(lblAnyos);
 		
 		JLabel lblPeso = new JLabel("Peso:");
 		lblPeso.setFont(new Font("Dialog", Font.PLAIN, 16));
@@ -114,32 +126,51 @@ public class DatosUsuario {
 		lblKg.setBounds(907, 225, 19, 31);
 		frame.getContentPane().add(lblKg);
 		
+		JSpinner spinner_peso = new JSpinner();
+		spinner_peso.setValue(70);
+		spinner_peso.setFont(new Font("Dialog", Font.PLAIN, 16));
+		spinner_peso.setBounds(802, 229, 96, 22);
+		frame.getContentPane().add(spinner_peso);
+		
 		JLabel lblAltura = new JLabel("Altura:");
 		lblAltura.setFont(new Font("Dialog", Font.PLAIN, 16));
 		lblAltura.setBounds(745, 315, 60, 17);
 		frame.getContentPane().add(lblAltura);
 		
-		JSpinner spinner_1_1 = new JSpinner();
-		spinner_1_1.setFont(new Font("Dialog", Font.PLAIN, 16));
-		spinner_1_1.setBounds(802, 342, 96, 22);
-		frame.getContentPane().add(spinner_1_1);
+		JSpinner spinner_altura = new JSpinner();		
+		spinner_altura.setValue(160);
+		spinner_altura.setFont(new Font("Dialog", Font.PLAIN, 16));
+		spinner_altura.setBounds(802, 342, 96, 22);
+		frame.getContentPane().add(spinner_altura);
 		
-		JLabel lblCm = new JLabel("cm");
-		lblCm.setFont(new Font("Dialog", Font.PLAIN, 16));
-		lblCm.setBounds(907, 338, 34, 31);
-		frame.getContentPane().add(lblCm);
+		JLabel lblcm = new JLabel("cm");
+		lblcm.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblcm.setBounds(907, 338, 74, 31);
+		frame.getContentPane().add(lblcm);
 		
 		JButton btnRestablecer = new JButton("Restablecer");
+		btnRestablecer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+	
+			/**
+			 * //Al hacerle click al botón Restablecer, ponemos el txtNombre a nulo, 
+			 * los spinners a sus valores por defecto y por último, habiendo creado el grupo de botones, 
+			 * hacemos el clearSelection(); para que no aparezca ningún RadioButton marcado.	
+			 */
+				
+					txtNombre.setText(null);				
+					spinner_anyos.setValue(18);             
+					spinner_peso.setValue(70);
+					spinner_altura.setValue(160);
+					grupoRadioBotones.clearSelection();
+					
+			}
+		});
 		btnRestablecer.setBounds(121, 433, 288, 27);
 		frame.getContentPane().add(btnRestablecer);
 		
 		JButton btnContinuar = new JButton("Continuar");
 		btnContinuar.setBounds(638, 433, 288, 27);
 		frame.getContentPane().add(btnContinuar);
-		
-		JSpinner spinner_1_1_1 = new JSpinner();
-		spinner_1_1_1.setFont(new Font("Dialog", Font.PLAIN, 16));
-		spinner_1_1_1.setBounds(802, 229, 96, 22);
-		frame.getContentPane().add(spinner_1_1_1);
 	}
 }
