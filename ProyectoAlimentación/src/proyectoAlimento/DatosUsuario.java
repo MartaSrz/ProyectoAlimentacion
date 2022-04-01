@@ -42,7 +42,7 @@ public class DatosUsuario{
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
-				}
+				} 
 			}
 		});
 	}

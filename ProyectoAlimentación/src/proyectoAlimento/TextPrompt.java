@@ -23,7 +23,7 @@ import javax.swing.text.JTextComponent;
  */
 public class TextPrompt extends JLabel
 	implements FocusListener, DocumentListener
-{
+{ 
 	private static final long serialVersionUID = 42L;
 
 	public enum Show
