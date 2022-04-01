@@ -418,6 +418,7 @@ public class CalculoNutritivo {
 		txtFondoColor.setColumns(10);
 		
 		JTextPane textConsejo = new JTextPane();
+		textConsejo.setEditable(false);
 		textConsejo.setFont(new Font("Dialog", Font.PLAIN, 14));
 		textConsejo.setBackground(FONDO_COLOR);
 		textConsejo.setBounds(307, 670, 402, 246);
