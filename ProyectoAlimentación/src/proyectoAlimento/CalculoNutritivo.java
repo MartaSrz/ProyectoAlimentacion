@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.SwingConstants;
 import javax.swing.JSeparator;
 import java.awt.Color;
@@ -78,7 +81,7 @@ public class CalculoNutritivo {
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setFont(new Font("Dialog", Font.BOLD, 16));
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Manzana", "Macarrones", "Cacahuetes", "Tomate", "Patata", "Lentejas", "Pechugas de pollo", "Pizza", "Nuggets", "Tortilla", "Yogurt", "Hamburguesas", "Costillas", "Arroz Blanco"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Manzana", "Macarrones", "Cacahuetes", "Tomate", "Patata", "Lentejas", "Pechugas de Pollo", "Pizza", "Nuggets", "Tortilla", "Yogurt", "Hamburguesas", "Costillas", "Arroz Blanco"}));
 		comboBox.setToolTipText("");
 		comboBox.setBounds(259, 23, 217, 37);
 		frame.getContentPane().add(comboBox);

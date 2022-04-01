@@ -78,14 +78,14 @@ public class DatosUsuario{
 		
 		JLabel lblComotellamas = new JLabel("¿Cómo te llamas?");
 		lblComotellamas.setForeground(Color.BLACK);
-		lblComotellamas.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblComotellamas.setFont(new Font("Dialog", Font.BOLD, 16));
 		lblComotellamas.setBounds(121, 120, 152, 31);
 		frame.getContentPane().add(lblComotellamas);
 		
 		txtNombre = new JTextField();
 		txtNombre.setFont(new Font("Dialog", Font.PLAIN, 16));
 		txtNombre.setForeground(Color.black);
-		txtNombre.setBounds(260, 123, 666, 25);
+		txtNombre.setBounds(265, 123, 666, 25);
 		frame.getContentPane().add(txtNombre);
 		txtNombre.setColumns(10);
 		
