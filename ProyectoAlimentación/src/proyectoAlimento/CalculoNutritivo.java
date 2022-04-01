@@ -17,12 +17,11 @@ import java.awt.Dimension;
 import javax.swing.JTextField;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextPane;
+import javax.swing.JEditorPane;
 
 public class CalculoNutritivo {
 
 	private JFrame frame;
-	private JTextField textAlimentosElegidos;
-	private JTextField textCantidadesElegidas;
 	private JTextField textFondo;
 	private final static Color FONDO_COLOR= new Color(255, 255, 221);
 	private JTextField txtFondoColor;
@@ -379,6 +378,18 @@ public class CalculoNutritivo {
 		lblKiloCalorias.setBounds(671, 169, 38, 32);
 		frame.getContentPane().add(lblKiloCalorias);
 		
+		JEditorPane txtAlimentosElegidos = new JEditorPane();
+		txtAlimentosElegidos.setEditable(false);
+		txtAlimentosElegidos.setBackground(FONDO_COLOR);
+		txtAlimentosElegidos.setBounds(801, 79, 233, 726);
+		frame.getContentPane().add(txtAlimentosElegidos);
+		
+		JEditorPane txtCantidadesElegidas = new JEditorPane();
+		txtCantidadesElegidas.setEditable(false);
+		txtCantidadesElegidas.setBounds(1085, 79, 154, 726);
+		txtCantidadesElegidas.setBackground(FONDO_COLOR);
+		frame.getContentPane().add(txtCantidadesElegidas);
+		
 		JLabel lblKiloJulios = new JLabel("KJ");
 		lblKiloJulios.setFont(new Font("Dialog", Font.PLAIN, 16));
 		lblKiloJulios.setBounds(671, 197, 38, 32);
@@ -395,20 +406,6 @@ public class CalculoNutritivo {
 		lblAlimentoElegido.setFont(new Font("Dialog", Font.BOLD, 18));
 		lblAlimentoElegido.setBounds(791, 37, 243, 26);
 		frame.getContentPane().add(lblAlimentoElegido);
-		
-		textAlimentosElegidos = new JTextField();
-		textAlimentosElegidos.setBackground(FONDO_COLOR);
-		textAlimentosElegidos.setEditable(false);
-		textAlimentosElegidos.setBounds(801, 79, 233, 726);
-		frame.getContentPane().add(textAlimentosElegidos);
-		textAlimentosElegidos.setColumns(10);
-		
-		textCantidadesElegidas = new JTextField();
-		textCantidadesElegidas.setBackground(FONDO_COLOR);
-		textCantidadesElegidas.setEditable(false);
-		textCantidadesElegidas.setColumns(10);
-		textCantidadesElegidas.setBounds(1075, 79, 154, 726);
-		frame.getContentPane().add(textCantidadesElegidas);
 
 		txtFondoColor = new JTextField();
 		txtFondoColor.setEditable(false);
