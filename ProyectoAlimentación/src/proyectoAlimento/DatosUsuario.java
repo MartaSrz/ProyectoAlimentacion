@@ -15,6 +15,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SpinnerNumberModel;
 
 public class DatosUsuario {
 
@@ -106,6 +107,7 @@ public class DatosUsuario {
 		frame.getContentPane().add(lblEdad);
 		
 		JSpinner spinner_anyos = new JSpinner();
+		spinner_anyos.setModel(new SpinnerNumberModel(new Integer(18), new Integer(0), null, new Integer(1)));
 		spinner_anyos.setValue(18);
         spinner_anyos.setFont(new Font("Dialog", Font.PLAIN, 16));
 		spinner_anyos.setBounds(165, 342, 91, 22);
@@ -127,6 +129,7 @@ public class DatosUsuario {
 		frame.getContentPane().add(lblKg);
 		
 		JSpinner spinner_peso = new JSpinner();
+		spinner_peso.setModel(new SpinnerNumberModel(new Integer(70), new Integer(0), null, new Integer(1)));
 		spinner_peso.setValue(70);
 		spinner_peso.setFont(new Font("Dialog", Font.PLAIN, 16));
 		spinner_peso.setBounds(802, 229, 96, 22);
@@ -138,6 +141,7 @@ public class DatosUsuario {
 		frame.getContentPane().add(lblAltura);
 		
 		JSpinner spinner_altura = new JSpinner();		
+		spinner_altura.setModel(new SpinnerNumberModel(new Integer(160), new Integer(0), null, new Integer(1)));
 		spinner_altura.setValue(160);
 		spinner_altura.setFont(new Font("Dialog", Font.PLAIN, 16));
 		spinner_altura.setBounds(802, 342, 96, 22);
