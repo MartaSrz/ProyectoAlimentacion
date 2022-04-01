@@ -26,7 +26,22 @@ public class CalculoNutritivo {
 	private JTextField textFondo;
 	private final static Color FONDO_COLOR= new Color(255, 255, 221);
 	private JTextField txtFondoColor;
-
+	private Alimento alimento[] = {
+			new Alimento("Manzana",95,396,0.03,0.1,25.1,18.9,0.5,4.4,0.1,10.9,0.2,194.7),
+			new Alimento("Macarrones",390,1631,1.6,0.3,78.4,2.8,13.7,3.4,0.1,22.1,3.5,234.2),
+			new Alimento("Cacahuetes",180,752,15.8,2.6,4.6,1.3,8.4,2.8,0.1,18.3,0.2,217.8),
+			new Alimento("Tomate",32,133,0.6,0.1,6.3,0,2.1,1.5,0.1,23.3,1,547),
+			new Alimento("Patata",52,219,0.1,0.1,12.1,0.5,1.1,1.2,0.1,3,0.2,227.4),
+			new Alimento("Lentejas",353,1478,1.1,0.2,60.1,2,25.8,30.5,0.1,56,7.5,955),
+			new Alimento("Pechuga de pollo",260,1089,13.2,3.5,9.0,0,24.8,0.3,0.3,20,1.3,201),
+			new Alimento("Pizza",266,1114,9.7,4.5,33.3,3.6,11.4,2.3,0.6,188,2.5,172),
+			new Alimento("Nuggets",296,1239,19.8,4,14.1,0,15.3,2.1,0.6,31,0.1,265),
+			new Alimento("Tortilla",154,645,11.7,3.3,0.6,0.3,10.6,0,0.2,48,1.5,117),
+			new Alimento("Yogurt",243,1016,2.8,1.8,45.7,45.7,9.8,0,0.1,338.1,0.1,433.7),
+			new Alimento("Hamburguesa",254,1063,12.3,3.8,24.8,0,11.7,0,0.5,57,2.4,206),
+			new Alimento("Costillas",224,938,16.3,5.8,0,0,19.1,0,0.1,31,0.8,247),
+			new Alimento("Arroz",97,406,0.2,0.1,21.1,0.1,2.0,1,0.1,2,0.1,10)
+			};
 	/**
 	 * Launch the application.
 	 */

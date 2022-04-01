@@ -1,8 +1,8 @@
 package proyectoAlimento;
 
-public class Alimento {
-	
-	protected String nombreFruta;
+public class Alimento { //Clase para almacenar los diferentes alimentos que se van a utilizar en el programa. Los valores deberían ser equivalentes a 100g de producto.
+
+	protected String nombre;
 	protected double kcal;
 	protected double kJ;
 	protected double grasas;
@@ -10,16 +10,17 @@ public class Alimento {
 	protected double hidratos;
 	protected double azucar;
 	protected double proteinas;
+	protected double fibra;
 	protected double sal;
 	protected double calcio;
-	protected double vitaminas;
-	protected double omega3;
 	protected double hierro;
-	
+	protected double potasio;
+
+
 	public Alimento(String nombreFruta, double kcal, double kJ, double grasas, double grasasSaturadas, double hidratos,
-			double azucar, double proteinas, double sal, double calcio, double vitaminas, double omega3,
-			double hierro) {
-		this.nombreFruta = nombreFruta;
+			double azucar, double proteinas, double fibra, double sal, double calcio, double hierro,
+			double potasio) {
+		this.nombre = nombreFruta;
 		this.kcal = kcal;
 		this.kJ = kJ;
 		this.grasas = grasas;
@@ -29,14 +30,15 @@ public class Alimento {
 		this.proteinas = proteinas;
 		this.sal = sal;
 		this.calcio = calcio;
-		this.vitaminas = vitaminas;
-		this.omega3 = omega3;
+		this.fibra = fibra;
+		this.potasio = potasio;
 		this.hierro = hierro;
-		
+
+
 	}
 
-	public String getNombreFruta() {
-		return nombreFruta;
+	public String getNombre() {
+		return nombre;
 	}
 
 	public double getKcal() {
@@ -75,12 +77,12 @@ public class Alimento {
 		return calcio;
 	}
 
-	public double getVitaminas() {
-		return vitaminas;
+	public double getFibra() {
+		return fibra;
 	}
 
-	public double getOmega3() {
-		return omega3;
+	public double getPotasio() {
+		return potasio;
 	}
 
 	public double getHierro() {
