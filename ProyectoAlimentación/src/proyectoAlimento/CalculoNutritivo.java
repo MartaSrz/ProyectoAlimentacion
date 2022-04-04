@@ -21,6 +21,7 @@ import javax.swing.JTextField;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextPane;
 import javax.swing.JEditorPane;
+import javax.swing.SpinnerNumberModel;
 
 public class CalculoNutritivo {
 
@@ -179,10 +180,11 @@ public class CalculoNutritivo {
 		lblcuntaCantidadHas.setBounds(49, 79, 280, 32);
 		ventanaCalc.getContentPane().add(lblcuntaCantidadHas);
 		
-		JSpinner n_veces = new JSpinner();
-		n_veces.setFont(new Font("Dialog", Font.BOLD, 16));
-		n_veces.setBounds(388, 79, 88, 32);
-		ventanaCalc.getContentPane().add(n_veces);
+		JSpinner cantidadGramos = new JSpinner();
+		cantidadGramos.setModel(new SpinnerNumberModel(new Integer(100), new Integer(10), null, new Integer(1)));
+		cantidadGramos.setFont(new Font("Dialog", Font.BOLD, 16));
+		cantidadGramos.setBounds(388, 79, 88, 32);
+		ventanaCalc.getContentPane().add(cantidadGramos);
 		
 		JButton btnComprobarResultados = new JButton("Comprobar resultados");
 		btnComprobarResultados.setFont(new Font("Dialog", Font.BOLD, 16));
@@ -311,28 +313,6 @@ public class CalculoNutritivo {
 		separator_4_1_3.setBounds(49, 594, 660, 10);
 		ventanaCalc.getContentPane().add(separator_4_1_3);
 		
-		JSeparator separator_5 = new JSeparator();
-		separator_5.setForeground(Color.BLACK);
-		separator_5.setBounds(756, 23, 514, 10);
-		ventanaCalc.getContentPane().add(separator_5);
-		
-		JSeparator separator_5_2 = new JSeparator();
-		separator_5_2.setOrientation(SwingConstants.VERTICAL);
-		separator_5_2.setForeground(Color.BLACK);
-		separator_5_2.setBounds(756, 23, 17, 813);
-		ventanaCalc.getContentPane().add(separator_5_2);
-		
-		JSeparator separator_6 = new JSeparator();
-		separator_6.setForeground(Color.BLACK);
-		separator_6.setOrientation(SwingConstants.VERTICAL);
-		separator_6.setBounds(1268, 23, 25, 813);
-		ventanaCalc.getContentPane().add(separator_6);
-		
-		JSeparator separator_7 = new JSeparator();
-		separator_7.setForeground(Color.BLACK);
-		separator_7.setBounds(756, 836, 513, 20);
-		ventanaCalc.getContentPane().add(separator_7);
-		
 		JLabel lblGramos = new JLabel("g");
 		lblGramos.setFont(new Font("Dialog", Font.PLAIN, 16));
 		lblGramos.setBounds(671, 244, 38, 32);
@@ -432,5 +412,11 @@ public class CalculoNutritivo {
 		ventanaCalc.getContentPane().add(textConsejo);
 		
 		textConsejo.setText("CONSEJO NUTRICIONAL\n\nTodas las células del cuerpo necesitan de agua para funcionar, por eso es esencial ingerir suficiente. Una adecuada hidratación te puede ayudar a mejorar tu digestión, la función de tus riñones y lucir una piel más hidratada.\n\nLo ideal es que consumas 2,7 litros de agua potable al día si eres mujer y 3,7 si eres hombre. Aquí se incluye el agua de los alimentos, que representa aproximadamente un 20% del total.");
+		
+		JLabel lblG = new JLabel("g");
+		lblG.setHorizontalAlignment(SwingConstants.LEFT);
+		lblG.setFont(new Font("Dialog", Font.BOLD, 16));
+		lblG.setBounds(487, 79, 25, 32);
+		ventanaCalc.getContentPane().add(lblG);
 	}
 }
