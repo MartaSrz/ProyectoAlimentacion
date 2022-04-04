@@ -209,7 +209,13 @@ public class DatosUsuario{
 		btnRestablecer.setBounds(121, 433, 288, 27);
 		frame.getContentPane().add(btnRestablecer);
 		
-		JButton btnContinuar = new JButton("Continuar");
+		JButton btnContinuar = new JButton("Continuar");  // Botón que cierra la primera ventana y abre la segunda
+		btnContinuar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				frame.setVisible(false);
+				CalculoNutritivo.arrancar(/**enviará un objeto persona*/);
+			}
+		});
 		btnContinuar.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnContinuar.setBounds(638, 433, 288, 27);
 		frame.getContentPane().add(btnContinuar);

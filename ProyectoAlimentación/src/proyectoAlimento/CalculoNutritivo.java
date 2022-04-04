@@ -28,7 +28,7 @@ public class CalculoNutritivo {
 	private JTextField textFondo;
 	private final static Color FONDO_COLOR= new Color(255, 255, 221);
 	private JTextField txtFondoColor;
-	private Alimento alimento[] = {
+	private Alimento alimento[] = { //Declaración de los alimentos a usar
 			new Alimento("Manzana",95,396,0.03,0.1,25.1,18.9,0.5,4.4,0.1,10.9,0.2,194.7),
 			new Alimento("Macarrones",390,1631,1.6,0.3,78.4,2.8,13.7,3.4,0.1,22.1,3.5,234.2),
 			new Alimento("Cacahuetes",180,752,15.8,2.6,4.6,1.3,8.4,2.8,0.1,18.3,0.2,217.8),
@@ -47,7 +47,8 @@ public class CalculoNutritivo {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void arrancar(/**recibirá una clase persona*/) { //Metodo para arrancar la segunda ventana
+			
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
