@@ -46,8 +46,9 @@ public class CalculoNutritivo {
 			};
 	/**
 	 * Launch the application.
+	 * @param usuario 
 	 */
-	public static void arrancar(/**recibirá una clase persona*/) { //Metodo para arrancar la segunda ventana
+	public static void arrancar(Persona usuario) { //Metodo para arrancar la segunda ventana
 			
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

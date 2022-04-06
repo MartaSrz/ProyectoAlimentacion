@@ -222,8 +222,16 @@ public class DatosUsuario{
 		JButton btnContinuar = new JButton("Continuar");  // Botón que cierra la primera ventana y abre la segunda
 		btnContinuar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				frame.setVisible(false);
-				CalculoNutritivo.arrancar(/**enviará un objeto persona*/);
+				String sexo = "Hombre";
+				if (rdbtnMujer.isSelected()) 
+					sexo="Mujer";
+				int peso= Integer.parseInt(spinner_peso.getValue().toString()); //obtenemos los valores del usuario para devolverlos mediante el constructor de la otra ventana
+				int altura= Integer.parseInt(spinner_altura.getValue().toString());
+				int edad= Integer.parseInt(spinner_anyos.getValue().toString());
+				Persona usuario = new Persona(txtNombre.getText(), sexo, peso , altura, edad); //Objeto de tipo persona con los datos del usuario
+				frame.setVisible(false); //Se cierra la ventana inicial
+				CalculoNutritivo.arrancar(usuario); //Se arranca la otra ventana pasandole como parametro el objeto de tipo Persona
+				
 			}
 		});
 		btnContinuar.setFont(new Font("Dialog", Font.BOLD, 16));
