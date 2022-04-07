@@ -5,15 +5,17 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Color;
 
 public class ResultadosUser {
 
 	private JFrame frame;
+	private final static Color FONDO_COLOR= new Color(255, 255, 221);
 
 	/**
 	 * Launch the application.
 	 */
-	public static void resultados(String[] args) {
+	public static void resultados(Persona usuario) { //accción para arrancar la tercera ventana
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -38,6 +40,7 @@ public class ResultadosUser {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(FONDO_COLOR);
 		frame.setBounds(100, 100, 780, 541);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
