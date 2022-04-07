@@ -6,7 +6,9 @@ public class Imc {
 
 	public static double imc() { //Calculo del imc de una persona
 
-		double calculo = usuario.getPeso()/Math.pow(usuario.getAltura()/100, 2);
+		double altura_usuario = usuario.getAltura();
+		
+		double calculo = usuario.getPeso()/Math.pow(altura_usuario/100, 2);
 
 		return calculo;
 
