@@ -22,6 +22,8 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextPane;
 import javax.swing.JEditorPane;
 import javax.swing.SpinnerNumberModel;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
 
 public class CalculoNutritivo {
 
@@ -89,6 +91,7 @@ public class CalculoNutritivo {
 		//el for para coger solo el nombre de los alimento para utilizarlo en el comboBox
 		
 		JComboBox SelectAlimentos = new JComboBox();
+
 		SelectAlimentos.setFont(new Font("Dialog", Font.BOLD, 16));
 		SelectAlimentos.setModel(new DefaultComboBoxModel(nombreAlimentos));
 		SelectAlimentos.setToolTipText("");
@@ -405,6 +408,26 @@ public class CalculoNutritivo {
 		ventanaCalc.getContentPane().add(txtFondoColor);
 		txtFondoColor.setColumns(10);
 		
+		SelectAlimentos.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent arg0) { // Se cambia de elemento el selector de alimentos
+				int seleccionado = SelectAlimentos.getSelectedIndex();
+				lblValor_1.setText(String.valueOf(alimento[seleccionado].getKcal()));
+				lblEnergtico_1.setText(String.valueOf(alimento[seleccionado].getkJ()));
+				lblGrasas_1.setText(String.valueOf(alimento[seleccionado].getGrasas()));
+				lblSaturadas_1.setText(String.valueOf(alimento[seleccionado].getGrasasSaturadas()));
+				lblHidratosDeCarbono_1.setText(String.valueOf(alimento[seleccionado].getHidratos()));
+				lblAzcar_1.setText(String.valueOf(alimento[seleccionado].getAzucar()));
+				lblProtenas_1.setText(String.valueOf(alimento[seleccionado].getProteinas()));
+				lblSal_1.setText(String.valueOf(alimento[seleccionado].getSal()));
+				lblCalcio_1.setText(String.valueOf(alimento[seleccionado].getCalcio()));
+				lblFibra_1.setText(String.valueOf(alimento[seleccionado].getFibra()));
+				lblPotasio_1.setText(String.valueOf(alimento[seleccionado].getPotasio()));
+				lblHierro_1.setText(String.valueOf(alimento[seleccionado].getHierro()));
+			}
+		});
+		 
+
+		
 		JTextPane textConsejo = new JTextPane();
 		textConsejo.setEditable(false);
 		textConsejo.setFont(new Font("Dialog", Font.PLAIN, 14));
@@ -413,6 +436,8 @@ public class CalculoNutritivo {
 		ventanaCalc.getContentPane().add(textConsejo);
 		
 		textConsejo.setText("CONSEJO NUTRICIONAL\n\nTodas las células del cuerpo necesitan de agua para funcionar, por eso es esencial ingerir suficiente. Una adecuada hidratación te puede ayudar a mejorar tu digestión, la función de tus riñones y lucir una piel más hidratada.\n\nLo ideal es que consumas 2,7 litros de agua potable al día si eres mujer y 3,7 si eres hombre. Aquí se incluye el agua de los alimentos, que representa aproximadamente un 20% del total.");
+		
+		
 		
 		JLabel lblG = new JLabel("g");
 		lblG.setHorizontalAlignment(SwingConstants.LEFT);
