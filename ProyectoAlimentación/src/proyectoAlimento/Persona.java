@@ -21,7 +21,7 @@ public class Persona {
 	public String getNombre() {
 		return nombre;
 	}
-	public String isSexo() {
+	public String getSexo() {
 		return sexo;
 	}
 	public int getPeso() {
