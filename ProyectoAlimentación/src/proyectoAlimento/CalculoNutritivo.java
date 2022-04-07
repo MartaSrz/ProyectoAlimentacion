@@ -24,6 +24,8 @@ import javax.swing.JEditorPane;
 import javax.swing.SpinnerNumberModel;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class CalculoNutritivo {
 
@@ -90,13 +92,13 @@ public class CalculoNutritivo {
 		}
 		//el for para coger solo el nombre de los alimento para utilizarlo en el comboBox
 		
-		JComboBox SelectAlimentos = new JComboBox();
+		JComboBox selectAlimentos = new JComboBox();
 
-		SelectAlimentos.setFont(new Font("Dialog", Font.BOLD, 16));
-		SelectAlimentos.setModel(new DefaultComboBoxModel(nombreAlimentos));
-		SelectAlimentos.setToolTipText("");
-		SelectAlimentos.setBounds(259, 23, 217, 37);
-		ventanaCalc.getContentPane().add(SelectAlimentos);
+		selectAlimentos.setFont(new Font("Dialog", Font.BOLD, 16));
+		selectAlimentos.setModel(new DefaultComboBoxModel(nombreAlimentos));
+		selectAlimentos.setToolTipText("");
+		selectAlimentos.setBounds(259, 23, 217, 37);
+		ventanaCalc.getContentPane().add(selectAlimentos);
 		
 		JLabel lblEscogeUnAlimento = new JLabel("Escoge un alimento:");
 		lblEscogeUnAlimento.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -408,9 +410,24 @@ public class CalculoNutritivo {
 		ventanaCalc.getContentPane().add(txtFondoColor);
 		txtFondoColor.setColumns(10);
 		
-		SelectAlimentos.addItemListener(new ItemListener() {
+		JTextPane textConsejo = new JTextPane();
+		textConsejo.setEditable(false);
+		textConsejo.setFont(new Font("Dialog", Font.PLAIN, 14));
+		textConsejo.setBackground(FONDO_COLOR);
+		textConsejo.setBounds(307, 670, 402, 246);
+		ventanaCalc.getContentPane().add(textConsejo);
+		
+		JLabel lblEspecificarGramos = new JLabel("g");
+		lblEspecificarGramos.setHorizontalAlignment(SwingConstants.LEFT);
+		lblEspecificarGramos.setFont(new Font("Dialog", Font.BOLD, 16));
+		lblEspecificarGramos.setBounds(487, 79, 25, 32);
+		ventanaCalc.getContentPane().add(lblEspecificarGramos);
+		
+		//ZONA DE TRABAJO-----------------------------------------------------------------------
+		
+		selectAlimentos.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) { // Se cambia de elemento el selector de alimentos
-				int seleccionado = SelectAlimentos.getSelectedIndex();
+				int seleccionado = selectAlimentos.getSelectedIndex();
 				lblValor_1.setText(String.valueOf(alimento[seleccionado].getKcal()));
 				lblEnergtico_1.setText(String.valueOf(alimento[seleccionado].getkJ()));
 				lblGrasas_1.setText(String.valueOf(alimento[seleccionado].getGrasas()));
@@ -425,24 +442,15 @@ public class CalculoNutritivo {
 				lblHierro_1.setText(String.valueOf(alimento[seleccionado].getHierro()));
 			}
 		});
-		 
-
-		
-		JTextPane textConsejo = new JTextPane();
-		textConsejo.setEditable(false);
-		textConsejo.setFont(new Font("Dialog", Font.PLAIN, 14));
-		textConsejo.setBackground(FONDO_COLOR);
-		textConsejo.setBounds(307, 670, 402, 246);
-		ventanaCalc.getContentPane().add(textConsejo);
 		
 		textConsejo.setText("CONSEJO NUTRICIONAL\n\nTodas las células del cuerpo necesitan de agua para funcionar, por eso es esencial ingerir suficiente. Una adecuada hidratación te puede ayudar a mejorar tu digestión, la función de tus riñones y lucir una piel más hidratada.\n\nLo ideal es que consumas 2,7 litros de agua potable al día si eres mujer y 3,7 si eres hombre. Aquí se incluye el agua de los alimentos, que representa aproximadamente un 20% del total.");
 		
-		
-		
-		JLabel lblG = new JLabel("g");
-		lblG.setHorizontalAlignment(SwingConstants.LEFT);
-		lblG.setFont(new Font("Dialog", Font.BOLD, 16));
-		lblG.setBounds(487, 79, 25, 32);
-		ventanaCalc.getContentPane().add(lblG);
+		btnAnyadir.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				txtAlimentosElegidos.setText(txtAlimentosElegidos.getText()+selectAlimentos.getSelectedItem()+"\n");
+				txtCantidadesElegidas.setText(txtCantidadesElegidas.getText()+cantidadGramos.getValue()+"\n");
+			}
+		});
 	}
 }
