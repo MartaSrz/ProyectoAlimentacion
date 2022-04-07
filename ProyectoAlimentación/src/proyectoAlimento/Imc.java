@@ -6,31 +6,29 @@ public class Imc {
 
 	public static double imc(int altura, int peso) { //Calculo del imc de una persona
 
-		double altura_usuario = usuario.getAltura();
-
-		double calculo = usuario.getPeso()/Math.pow(altura_usuario/100, 2);
+		double calculo = peso/Math.pow(altura/100, 2);
 
 		return calculo;
 
 	}
 
-	public static String peso_ideal(int edad, int altura, int peso) { //Según el imc, mostraremos al usuario el peso ideal seas hombre o mujer
+	public static String peso_ideal(int edad, int altura, int peso, String sexo) { //Según el imc, mostraremos al usuario el peso ideal seas hombre o mujer
 
 		String estadoFisico = "";
 
 		double calc= imc(altura, peso);
 
-		if (usuario.getSexo().equals("Hombre")) {
+		if (sexo.equals("Hombre")) {
 
-			if ((usuario.getEdad()>=19 && usuario.getEdad()<=24) && (calc>=10.8 && calc<=14.9)) {
-
-				estadoFisico = "Su estado físico es Óptimo";
-
-			}else if ((usuario.getEdad()>=25 && usuario.getEdad()<=29) && (calc>=12.8 && calc<=16.5)) {
+			if ((edad>=19 && edad<=24) && (calc>=10.8 && calc<=14.9)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
-			}else if((usuario.getEdad()>=30 && usuario.getEdad()<=34) && (calc>=14.5 && calc<=18)) {
+			}else if ((edad>=25 && edad<=29) && (calc>=12.8 && calc<=16.5)) {
+
+				estadoFisico = "Su estado físico es Óptimo";
+
+			}else if((edad>=30 && edad<=34) && (calc>=14.5 && calc<=18)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
