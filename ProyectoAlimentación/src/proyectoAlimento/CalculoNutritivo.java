@@ -32,7 +32,7 @@ public class CalculoNutritivo {
 	private JFrame ventanaCalc;
 	private final static Color FONDO_COLOR= new Color(255, 255, 221);
 	private JTextField txtFondoColor;
-	private static Persona userResultados; //Persona que mandaremos a la clase ResultadosUser
+	private Persona usuario;  //Persona que mandaremos a la clase ResultadosUser
 	private Alimento alimento[] = { //Declaración de los alimentos a usar
 			new Alimento("Manzana",95,396,0.03,0.1,25.1,18.9,0.5,4.4,0.1,10.9,0.2,194.7),
 			new Alimento("Macarrones",390,1631,1.6,0.3,78.4,2.8,13.7,3.4,0.1,22.1,3.5,234.2),
@@ -54,7 +54,7 @@ public class CalculoNutritivo {
 	 * @param usuario 
 	 */
 	public static void arrancar(Persona usuario) { //Metodo para arrancar la segunda ventana
-		userResultados=usuario; //el user que va a ser pasado a la clase ResultadoUser es el mismo que el user mandado a esta clase en la clase DatosUsuario
+		 //el user que va a ser pasado a la clase ResultadoUser es el mismo que el user mandado a esta clase en la clase DatosUsuario
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -458,7 +458,7 @@ public class CalculoNutritivo {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				ventanaCalc.setVisible(false);
-				ResultadosUser.resultados(userResultados); //misma acción que en la otra ventana, pasándole la misma persona
+				ResultadosUser.resultados(usuario); //misma acción que en la otra ventana, pasándole la misma persona
 			}
 		});
 

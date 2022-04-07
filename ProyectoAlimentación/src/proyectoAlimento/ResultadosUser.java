@@ -11,7 +11,7 @@ public class ResultadosUser {
 
 	private JFrame frame;
 	private final static Color FONDO_COLOR= new Color(255, 255, 221);
-
+	private Persona usuario;
 	/**
 	 * Launch the application.
 	 */
