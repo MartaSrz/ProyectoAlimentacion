@@ -11,11 +11,12 @@ public class ResultadosUser {
 
 	private JFrame frame;
 	private final static Color FONDO_COLOR= new Color(255, 255, 221);
-	private Persona usuario;
+	private static Persona usuario;
 	/**
 	 * Launch the application.
 	 */
 	public static void resultados(Persona usuario) { //accción para arrancar la tercera ventana
+		ResultadosUser.usuario=usuario;
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -50,6 +51,7 @@ public class ResultadosUser {
 		lblEstosSonTus.setBounds(151, 12, 467, 17);
 		frame.getContentPane().add(lblEstosSonTus);
 		
+		System.out.println(usuario.getAltura() + "Altura!");
 		Imc.peso_ideal(usuario.getEdad(), usuario.getAltura(), usuario.getPeso());
 	}
 }
