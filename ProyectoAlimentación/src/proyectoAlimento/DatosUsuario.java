@@ -247,6 +247,7 @@ public class DatosUsuario{
 			public void actionPerformed(ActionEvent arg0) {
 				//comprobar que todos los datos se rellenan para poder pasar a la siguiente ventana
 				if (txtNombre.getText().equals("") || txtNombre.getText().equals(DEFECTO_TXTNOMBRE)) {
+					lblErrorSexo.setText("");
 					lblErrorNombre.setText("Pon tu nombre porfavor :D");
 				}else if (!rdbtnMujer.isSelected() && !rdbtnHombre.isSelected()) {
 					lblErrorNombre.setText("");
