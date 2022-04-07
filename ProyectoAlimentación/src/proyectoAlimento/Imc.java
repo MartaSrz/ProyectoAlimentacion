@@ -22,111 +22,111 @@ public class Imc {
 
 		if (usuario.getSexo().equals("Hombre")) {
 
-			if (usuario.getEdad()>=19 && usuario.getEdad()<=24 && calc>=10.8 && calc<=14.9) {
+			if ((usuario.getEdad()>=19 && usuario.getEdad()<=24) && (calc>=10.8 && calc<=14.9)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
-			}else if (usuario.getEdad()>=25 && usuario.getEdad()<=29 && calc>=12.8 && calc<=16.5) {
+			}else if ((usuario.getEdad()>=25 && usuario.getEdad()<=29) && (calc>=12.8 && calc<=16.5)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
-			}else if(usuario.getEdad()>=30 && usuario.getEdad()<=34 && calc>=14.5 && calc<=18) {
+			}else if((usuario.getEdad()>=30 && usuario.getEdad()<=34) && (calc>=14.5 && calc<=18)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
-			}else if (usuario.getEdad()>=35 && usuario.getEdad()<=39 && calc >=16.1 && calc<=19.4) {
+			}else if ((usuario.getEdad()>=35 && usuario.getEdad()<=39) && (calc >=16.1 && calc<=19.4)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
-			}else if (usuario.getEdad()>=40 && usuario.getEdad()<=44 && calc >=17.5 && calc<=20.5) {
+			}else if ((usuario.getEdad()>=40 && usuario.getEdad()<=44) && (calc >=17.5 && calc<=20.5)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
-			}else if (usuario.getEdad()>=45 && usuario.getEdad()<=49 && calc >=18.6 && calc<=21.5) {
+			}else if ((usuario.getEdad()>=45 && usuario.getEdad()<=49) && (calc >=18.6 && calc<=21.5)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
-			}else if (usuario.getEdad()>=50 && usuario.getEdad()<=54 && calc>=19.8 && calc<=22.7) {
+			}else if ((usuario.getEdad()>=50 && usuario.getEdad()<=54) && (calc>=19.8 && calc<=22.7)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
-			}else if (usuario.getEdad()>=55 && usuario.getEdad()<=59 && calc>=20.2 && calc<=23.2) {
+			}else if ((usuario.getEdad()>=55 && usuario.getEdad()<=59) && (calc>=20.2 && calc<=23.2)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
-			}else if (usuario.getEdad()>=60 && calc>=20.3 && calc<=23.5) {
+			}else if ((usuario.getEdad()>=60) && (calc>=20.3 && calc<=23.5)) {
 
 				estadoFisico = "Su estado físico es Óptimo";
 
-			}else if (usuario.getEdad()>=19 && usuario.getEdad()<=24 && calc>14.9 && calc<=19) {
+			}else if ((usuario.getEdad()>=19 && usuario.getEdad()<=24) && (calc>14.9 && calc<=19)) {
 
 				estadoFisico = "Su estado físico es Bueno";
 
-			}else if (usuario.getEdad()>=25 && usuario.getEdad()<=29 && calc>16.5 && calc<=20.3) {
+			}else if ((usuario.getEdad()>=25 && usuario.getEdad()<=29) && (calc>16.5 && calc<=20.3)) {
 
 				estadoFisico = "Su estado físico es Bueno";
 
-			}else if (usuario.getEdad()>=30 && usuario.getEdad()<=34 && calc>18 && calc<=21.5) {
+			}else if ((usuario.getEdad()>=30 && usuario.getEdad()<=34) && (calc>18 && calc<=21.5)) {
 
 				estadoFisico = "Su estado físico es Bueno";
 
-			}else if (usuario.getEdad()>=35 && usuario.getEdad()<=39 && calc>19.4 && calc<=22.6) {
+			}else if ((usuario.getEdad()>=35 && usuario.getEdad()<=39) && (calc>19.4 && calc<=22.6)) {
 
 				estadoFisico = "Su estado físico es Bueno";
 
-			}else if (usuario.getEdad()>=40 && usuario.getEdad()<=44 && calc>20.5 && calc<=23.6) {
+			}else if ((usuario.getEdad()>=40 && usuario.getEdad()<=44) && (calc>20.5 && calc<=23.6)) {
 
 				estadoFisico = "Su estado físico es Bueno";
 
-			}else if (usuario.getEdad()>=45 && usuario.getEdad()<=49 && calc>21.5 && calc<=24.5) {
+			}else if ((usuario.getEdad()>=45 && usuario.getEdad()<=49) && (calc>21.5 && calc<=24.5)) {
 
 				estadoFisico = "Su estado físico es Bueno";
 
-			}else if (usuario.getEdad()>=50 && usuario.getEdad()<=54 && calc>22.7 && calc<=25.6) {
+			}else if ((usuario.getEdad()>=50 && usuario.getEdad()<=54) && (calc>22.7 && calc<=25.6)) {
 
 				estadoFisico = "Su estado físico es Bueno";
 
-			}else if (usuario.getEdad()>=55 && usuario.getEdad()<=59 && calc>23.2 && calc<=26.2) {
+			}else if ((usuario.getEdad()>=55 && usuario.getEdad()<=59) && (calc>23.2 && calc<=26.2)) {
 
 				estadoFisico = "Su estado físico es Bueno";
 
-			}else if (usuario.getEdad()>=60 && calc>23.2 && calc<=26.7) {
+			}else if ((usuario.getEdad()>=60) && (calc>23.2 && calc<=26.7)) {
 
 				estadoFisico = "Su estado físico es Bueno";
 
-			}else if (usuario.getEdad()>=19 && usuario.getEdad()<=24 && calc>23) {
+			}else if ((usuario.getEdad()>=19 && usuario.getEdad()<=24) && (calc>23)) {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
-			}else if (usuario.getEdad()>=25 && usuario.getEdad()<=29 && calc>24.4) {
+			}else if ((usuario.getEdad()>=25 && usuario.getEdad()<=29) && (calc>24.4)) {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
-			}else if (usuario.getEdad()>=30 && usuario.getEdad()<=34 && calc>25.2) {
+			}else if ((usuario.getEdad()>=30 && usuario.getEdad()<=34) && (calc>25.2)) {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
-			}else if (usuario.getEdad()>=35 && usuario.getEdad()<=39 && calc>26.1) {
+			}else if ((usuario.getEdad()>=35 && usuario.getEdad()<=39) && (calc>26.1)) {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
-			}else if (usuario.getEdad()>=40 && usuario.getEdad()<=44 && calc>26.9) {
+			}else if ((usuario.getEdad()>=40 && usuario.getEdad()<=44) && (calc>26.9)) {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
-			}else if (usuario.getEdad()>=45 && usuario.getEdad()<=49 && calc>27.6) {
+			}else if ((usuario.getEdad()>=45 && usuario.getEdad()<=49) && (calc>27.6)) {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
-			}else if (usuario.getEdad()>=50 && usuario.getEdad()<=54 && calc>28.7) {
+			}else if ((usuario.getEdad()>=50 && usuario.getEdad()<=54) && (calc>28.7)) {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
-			}else if (usuario.getEdad()>=55 && usuario.getEdad()<=59 && calc>29.3) {
+			}else if ((usuario.getEdad()>=55 && usuario.getEdad()<=59) && (calc>29.3)) {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
-			}else if (usuario.getEdad()>=60 && calc>29.8) {
+			}else if ((usuario.getEdad()>=60) && (calc>29.8)) {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
