@@ -4,21 +4,21 @@ public class Imc {
 
 	private static Persona usuario;
 
-	public static double imc() { //Calculo del imc de una persona
+	public static double imc(int altura, int peso) { //Calculo del imc de una persona
 
 		double altura_usuario = usuario.getAltura();
-		
+
 		double calculo = usuario.getPeso()/Math.pow(altura_usuario/100, 2);
 
 		return calculo;
 
 	}
 
-	public static String peso_ideal_hombre() { //Según el imc, mostraremos al usuario el peso ideal seas hombre o mujer
+	public static String peso_ideal(int edad, int altura, int peso) { //Según el imc, mostraremos al usuario el peso ideal seas hombre o mujer
 
 		String estadoFisico = "";
 
-		double calc= imc();
+		double calc= imc(altura, peso);
 
 		if (usuario.getSexo().equals("Hombre")) {
 
@@ -130,6 +130,10 @@ public class Imc {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
+			}else if (usuario.getEdad()<19) {
+				
+				estadoFisico = "¡ERROR: Solo funciona con personas de 19 años o más!";
+				
 			}
 
 		}else 
@@ -242,6 +246,10 @@ public class Imc {
 
 				estadoFisico = "Su estado físico es Malo (Obesidad)";
 
+			}else if (usuario.getEdad()<19) {
+				
+				estadoFisico = "¡ERROR: Solo funciona con personas de 19 años o más!";
+				
 			}
 
 		return estadoFisico;
