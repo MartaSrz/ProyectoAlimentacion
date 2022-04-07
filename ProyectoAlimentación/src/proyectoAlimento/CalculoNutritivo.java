@@ -452,5 +452,14 @@ public class CalculoNutritivo {
 				txtCantidadesElegidas.setText(txtCantidadesElegidas.getText()+cantidadGramos.getValue()+"\n");
 			}
 		});
+		
+		btnComprobarResultados.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventanaCalc.setVisible(false);
+				ResultadosUser.resultados(nombreAlimentos);
+			}
+		});
+
 	}
 }
