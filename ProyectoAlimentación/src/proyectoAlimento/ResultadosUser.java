@@ -49,5 +49,7 @@ public class ResultadosUser {
 		lblEstosSonTus.setFont(new Font("Dialog", Font.BOLD, 16));
 		lblEstosSonTus.setBounds(151, 12, 467, 17);
 		frame.getContentPane().add(lblEstosSonTus);
+		
+		Imc.peso_ideal(usuario.getEdad(), usuario.getAltura(), usuario.getPeso());
 	}
 }
