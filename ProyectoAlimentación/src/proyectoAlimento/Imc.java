@@ -17,6 +17,7 @@ public class Imc {
 		String estadoFisico = "";
 
 		double calc= imc(altura, peso);
+		
 
 		if (sexo.equals("Hombre")) {
 
