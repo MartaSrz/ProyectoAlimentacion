@@ -52,6 +52,6 @@ public class ResultadosUser {
 		frame.getContentPane().add(lblEstosSonTus);
 		
 		System.out.println(usuario.getAltura() + "Altura!");
-		Imc.peso_ideal(usuario.getEdad(), usuario.getAltura(), usuario.getPeso());
+		Imc.peso_ideal(usuario.getEdad(), usuario.getAltura(), usuario.getPeso(), usuario.getSexo());
 	}
 }
