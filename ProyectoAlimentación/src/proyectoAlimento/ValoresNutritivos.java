@@ -455,16 +455,15 @@ public class ValoresNutritivos {
 		
 		btnAnyadir.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
+			public void mouseClicked(MouseEvent e) { /*eso va a almacenar en el texto la cantidad y el alimento*/
 				txtAlimentosElegidos.setText(txtAlimentosElegidos.getText()+selectAlimentos.getSelectedItem()+"\n");
-				txtCantidadesElegidas.setText(txtCantidadesElegidas.getText()+cantidadGramos.getValue()+"\n");
+				txtCantidadesElegidas.setText(txtCantidadesElegidas.getText()+cantidadGramos.getValue()+"g\n");
 			}
 		});
 		
 		btnComprobarResultados.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				System.out.println(usuario + "segundo");
 				ventanaCalc.setVisible(false);
 				ResultadosUser.resultados(usuario); /*misma acción que en la ventana main pero hacia la tercera ventana, le pasamos la misma persona*/
 			}
