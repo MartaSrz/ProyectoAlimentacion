@@ -1,3 +1,8 @@
+/*Clase para crear una persona con su correspondiente peso, edad, etc. para
+ *realizar los respectivos cálculos dependiendo del valor de sus atributos  
+ * */
+
+
 package proyectoAlimento;
 
 public class Persona {

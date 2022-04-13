@@ -1,3 +1,8 @@
+/*Clase llamada por ResultadosUser la cual llamará a Resultados User.
+ *Esta clase ha sido creada para preguntar al usuario qué alimento y cuánta cántidad
+ *ha consumido de este, también mostrará los valores nutritivos del alimento elegido.
+ */
+
 package proyectoAlimento;
 
 import java.awt.EventQueue;
@@ -27,7 +32,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class CalculoNutritivo {
+public class ValoresNutritivos {
 
 	private JFrame ventanaCalc;
 	private final static Color FONDO_COLOR= new Color(255, 255, 221);
@@ -53,13 +58,13 @@ public class CalculoNutritivo {
 	 * Launch the application.
 	 * @param usuario 
 	 */
-	public static void arrancar(Persona usuario) { //Metodo para arrancar la segunda ventana
-		CalculoNutritivo.usuario=usuario;
-		 //el user que va a ser pasado a la clase ResultadoUser es el mismo que el user mandado a esta clase en la clase DatosUsuario
+	public static void arrancar(Persona usuario) { /*Metodo para arrancar la segunda ventana*/
+		ValoresNutritivos.usuario=usuario;
+		/*el user que va a ser pasado a la clase ResultadoUser es el mismo que el user mandado a esta clase en la clase DatosUsuario*/
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CalculoNutritivo window = new CalculoNutritivo();
+					ValoresNutritivos window = new ValoresNutritivos();
 					window.ventanaCalc.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -71,7 +76,7 @@ public class CalculoNutritivo {
 	/**
 	 * Create the application.
 	 */
-	public CalculoNutritivo() {
+	public ValoresNutritivos() {
 		initialize();
 	}
 
@@ -87,12 +92,12 @@ public class CalculoNutritivo {
 		ventanaCalc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		ventanaCalc.getContentPane().setLayout(null);
 
+		/* creación del for para coger solo el nombre de los alimento para utilizarlo en el comboBox*/
 		int longitudArray=alimento.length;
 		String[] nombreAlimentos= new String[longitudArray];
 		for (int i=0; i<longitudArray; i++) {
 			nombreAlimentos[i]=alimento[i].getNombre();
 		}
-		//el for para coger solo el nombre de los alimento para utilizarlo en el comboBox
 		
 		JComboBox selectAlimentos = new JComboBox();
 
@@ -428,7 +433,7 @@ public class CalculoNutritivo {
 		//ZONA DE TRABAJO-----------------------------------------------------------------------
 		
 		selectAlimentos.addItemListener(new ItemListener() {
-			public void itemStateChanged(ItemEvent arg0) { // Se cambia de elemento el selector de alimentos
+			public void itemStateChanged(ItemEvent arg0) { /*Se cambia de elemento el selector de alimentos*/
 				int seleccionado = selectAlimentos.getSelectedIndex();
 				lblValor_1.setText(String.valueOf(alimento[seleccionado].getKcal()));
 				lblEnergtico_1.setText(String.valueOf(alimento[seleccionado].getkJ()));
@@ -460,7 +465,7 @@ public class CalculoNutritivo {
 			public void mouseClicked(MouseEvent e) {
 				System.out.println(usuario + "segundo");
 				ventanaCalc.setVisible(false);
-				ResultadosUser.resultados(usuario); //misma acción que en la otra ventana, pasándole la misma persona
+				ResultadosUser.resultados(usuario); /*misma acción que en la ventana main pero hacia la tercera ventana, le pasamos la misma persona*/
 			}
 		});
 
