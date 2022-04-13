@@ -1,4 +1,5 @@
-/*Clase llamada por ResultadosUser la cual llamará a Resultados User.
+/**
+ *Clase llamada por ResultadosUser la cual llamará a Resultados User.
  *Esta clase ha sido creada para preguntar al usuario qué alimento y cuánta cántidad
  *ha consumido de este, también mostrará los valores nutritivos del alimento elegido.
  */

@@ -1,4 +1,5 @@
-/*Clase llamada por ValoresNutritivos.
+/**
+ *Clase llamada por ValoresNutritivos.
  *Esta clase ha sido creada para mostrar los resultados finales al user.
  */
 

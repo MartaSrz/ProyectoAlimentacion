@@ -1,4 +1,5 @@
-/*Clase Main.
+/**
+ *Clase Main.
  *Esta clase ha sido creada para pedirle la información necesaria al usuario, la cual
  *será clave para calcular el resultado final. eEsta inforrmación será mandada a la clase persona.
  */
