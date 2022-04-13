@@ -66,7 +66,7 @@ public class ResultadosUser {
 		lblcualessupeso.setFont(new Font("Dialog", Font.PLAIN, 16));
 		lblcualessupeso.setBounds(151, 436, 558, 17);
 		frame.getContentPane().add(lblcualessupeso);
-		lblcualessupeso.setText("Hola " + usuario.getNombre() + ". " + Imc.calcular_peso_ideal(usuario.getEdad(), usuario.getAltura(), usuario.getPeso(), usuario.getSexo()));
+		lblcualessupeso.setText("¡Hola " + usuario.getNombre() + "!. " + Imc.calcular_peso_ideal(usuario.getEdad(), usuario.getAltura(), usuario.getPeso(), usuario.getSexo()));
 		
 		JLabel lblimc_persona = new JLabel("");
 		lblimc_persona.setFont(new Font("Dialog", Font.PLAIN, 16));

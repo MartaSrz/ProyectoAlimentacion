@@ -11,9 +11,9 @@ public class Imc {
 
 	public static double calcular_imc(int altura, int peso) { 
 		
-		double alt = (double) altura/100;
+		double medida = (double) altura/100;
 		
-		double calculo = peso/Math.pow(alt, 2);
+		double calculo = peso/Math.pow(medida, 2);
 
 		return calculo;
 
