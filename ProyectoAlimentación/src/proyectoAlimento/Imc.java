@@ -24,11 +24,11 @@ public class Imc {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad==17 && edad==18) && (calc>=20 && calc<=25)) {
+			}else if ((edad==17) && (calc>=20 && calc<=25)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if((edad==18) && (calc>=14.5 && calc<=18)) {
+			}else if((edad==18) && (calc>=20 && calc<=25)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
