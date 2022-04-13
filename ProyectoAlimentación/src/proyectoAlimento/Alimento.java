@@ -1,6 +1,9 @@
 package proyectoAlimento;
-
-public class Alimento { //Clase para almacenar los diferentes alimentos que se van a utilizar en el programa. Los valores deberían ser equivalentes a 100g de producto.
+/**
+ * Clase para almacenar los diferentes alimentos que se van a utilizar en el programa. 
+ * @author Jesús
+ */
+public class Alimento {
 
 	protected String nombre;
 	protected double kcal;
@@ -15,6 +18,22 @@ public class Alimento { //Clase para almacenar los diferentes alimentos que se v
 	protected double calcio;
 	protected double hierro;
 	protected double potasio;
+	
+	/**
+	 * @param nombre - El nombre del alimento
+	 * @param kcal - Valor energético (en Kilo Calorías)
+	 * @param kJ - Valor energético (en Kilo Julios)
+	 * @param grasas - Cantidad de grasas (en gramos)
+	 * @param grasasSaturadas- Grasas de las cuales son saturadas (en gramos)
+	 * @param hidratos - Hidratos de carbono (en gramos)
+	 * @param azucar - Cantidad de azucar (en gramos)
+	 * @param proteinas - Cantidad de proteínas (en gramos)
+	 * @param fibra - Cantidad de Fibra (en miligramos)
+	 * @param sal - Cantidad de sal (en miligramos)
+	 * @param calcio - Cantidad de calcio (en miligramos)
+	 * @param hierro - Cantidad de hierro (en miligramos)
+	 * @param potasio - Cantidad de potasio (en miligramos)
+	 */
 
 
 	public Alimento(String nombreFruta, double kcal, double kJ, double grasas, double grasasSaturadas, double hidratos,
