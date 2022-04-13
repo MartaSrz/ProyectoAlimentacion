@@ -9,7 +9,7 @@ package proyectoAlimento;
 
 public class Imc {	
 
-	public static double imc(int altura, int peso) { 
+	public static double calcular_imc(int altura, int peso) { 
 		
 		double alt = (double) altura/100;
 		
@@ -28,43 +28,43 @@ public class Imc {
 	 * @return
 	 */
 
-	public static String peso_ideal(int edad, int altura, int peso, String sexo) { 
+	public static String calcular_peso_ideal(int edad, int altura, int peso, String sexo) { 
 
 		String estadoFisico = "";
 
-		double calc= imc(altura, peso);
+		double calculo_imc = calcular_imc(altura, peso);
 
 		if (sexo.equals("Hombre")) { 
 
-			if ((edad==16) && (calc>=19 && calc<=24)) { //Peso ideal Hombres
+			if ((edad==16) && (calculo_imc>=19 && calculo_imc<=24)) { //Peso ideal Hombres
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad==17) && (calc>=20 && calc<=25)) {
+			}else if ((edad==17) && (calculo_imc>=20 && calculo_imc<=25)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if((edad==18) && (calc>=20 && calc<=25)) {
+			}else if((edad==18) && (calculo_imc>=20 && calculo_imc<=25)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=19 && edad<=24) && (calc >=21 && calc<=26)) {
+			}else if ((edad>=19 && edad<=24) && (calculo_imc >=21 && calculo_imc<=26)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=25 && edad<=34) && (calc >=22 && calc<=27)) {
+			}else if ((edad>=25 && edad<=34) && (calculo_imc >=22 && calculo_imc<=27)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=35 && edad<=54) && (calc >=23 && calc<=38)) {
+			}else if ((edad>=35 && edad<=54) && (calculo_imc >=23 && calculo_imc<=38)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=55 && edad<=64) && (calc>=24 && calc<=29)) {
+			}else if ((edad>=55 && edad<=64) && (calculo_imc>=24 && calculo_imc<=29)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=65 && edad<=90) && (calc>=25 && calc<=30)) { 
+			}else if ((edad>=65 && edad<=90) && (calculo_imc>=25 && calculo_imc<=30)) { 
 
 				estadoFisico = "Su estado físico es Ideal";
 
@@ -74,35 +74,35 @@ public class Imc {
 
 		}else //Peso ideal Mujeres
 
-			if ((edad>=16 && edad<=17) && (calc>=19 && calc<=24)) {
+			if ((edad>=16 && edad<=17) && (calculo_imc>=19 && calculo_imc<=24)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=18) && (calc>=19 && calc<=24)) {
+			}else if ((edad>=18) && (calculo_imc>=19 && calculo_imc<=24)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if((edad>=19 && edad<=24) && (calc>=19 && calc<=24)) {
+			}else if((edad>=19 && edad<=24) && (calculo_imc>=19 && calculo_imc<=24)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=25 && edad<=34) && (calc>=20 && calc<=25)) {
+			}else if ((edad>=25 && edad<=34) && (calculo_imc>=20 && calculo_imc<=25)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=35 && edad<=44) && (calc>=21 && calc<=26)) {
+			}else if ((edad>=35 && edad<=44) && (calculo_imc>=21 && calculo_imc<=26)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=45 && edad<=54) && (calc>=22 && calc<=27)) {
+			}else if ((edad>=45 && edad<=54) && (calculo_imc>=22 && calculo_imc<=27)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=55 && edad<=64) && (calc>=23 && calc<=28)) {
+			}else if ((edad>=55 && edad<=64) && (calculo_imc>=23 && calculo_imc<=28)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=65 && edad<=90) && (calc>=25 && calc<=30)) {
+			}else if ((edad>=65 && edad<=90) && (calculo_imc>=25 && calculo_imc<=30)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
@@ -117,37 +117,37 @@ public class Imc {
 	public static String imc_persona(int altura, int peso) { 
 		String imc_persona = "";
 
-		double calc= imc(altura, peso);
+		double calculo_imc= calcular_imc(altura, peso);
 
-		if (calc < 16) {
+		if (calculo_imc < 16) {
 
 			imc_persona = "Delgadez Severa";
 
-		}else if (calc < 16 && calc <= 17) {
+		}else if (calculo_imc < 16 && calculo_imc <= 17) {
 
 			imc_persona = "Delgadez Moderada";
 
-		}else 	if (calc >= 17 && calc <= 18.5) {
+		}else 	if (calculo_imc >= 17 && calculo_imc <= 18.5) {
 
 			imc_persona = "Delgadez Leve";
 
-		}else 	if (calc >= 18.5 && calc <= 24.9) {
+		}else 	if (calculo_imc >= 18.5 && calculo_imc <= 24.9) {
 
 			imc_persona = "Peso Normal";
 
-		}else 	if (calc >= 25 && calc <= 29.9) {
+		}else 	if (calculo_imc >= 25 && calculo_imc <= 29.9) {
 
 			imc_persona = "Pre-Obeso";
 
-		}else 	if (calc >= 30 && calc <= 34.9) {
+		}else 	if (calculo_imc >= 30 && calculo_imc <= 34.9) {
 
 			imc_persona = "Obesidad Tipo I";
 
-		}else 	if (calc >= 35 && calc <= 39.9) {
+		}else 	if (calculo_imc >= 35 && calculo_imc <= 39.9) {
 
 			imc_persona = "Obesidad Tipo II";
 
-		}else	if (calc >= 40) {
+		}else	if (calculo_imc >= 40) {
 
 			imc_persona = "Obesidad Tipo III";
 
