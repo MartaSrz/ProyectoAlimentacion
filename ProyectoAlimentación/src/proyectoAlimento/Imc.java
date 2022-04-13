@@ -4,251 +4,141 @@ public class Imc {
 
 	public static double imc(int altura, int peso) { //Calculo del imc de una persona
 
-		double calculo = peso/Math.pow(altura/100, 2);
+		double alt = (double) altura/100;
+		
+		double calculo = peso/Math.pow(alt, 2);
 
 		return calculo;
 
 	}
 
-	public static String peso_ideal(int edad, int altura, int peso, String sexo) { //Según el imc, mostraremos al usuario el peso ideal seas hombre o mujer
+	public static String peso_ideal(int edad, int altura, int peso, String sexo) { //Según el imc, mostraremos si el usuario se encuentra en el peso ideal seas hombre o mujer
 
 		String estadoFisico = "";
 
 		double calc= imc(altura, peso);
 
-		if (sexo.equals("Hombre")) {
+		if (sexo.equals("Hombre")) { 
 
-			if ((edad>=19 && edad<=24) && (calc>=10.8 && calc<=14.9)) {
+			if ((edad==16) && (calc>=19 && calc<=24)) { //Peso ideal Hombres
 
-				estadoFisico = "Su estado físico es Óptimo";
+				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=25 && edad<=29) && (calc>=12.8 && calc<=16.5)) {
+			}else if ((edad==17 && edad==18) && (calc>=20 && calc<=25)) {
 
-				estadoFisico = "Su estado físico es Óptimo";
+				estadoFisico = "Su estado físico es Ideal";
 
-			}else if((edad>=30 && edad<=34) && (calc>=14.5 && calc<=18)) {
+			}else if((edad==18) && (calc>=14.5 && calc<=18)) {
 
-				estadoFisico = "Su estado físico es Óptimo";
+				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=35 && edad<=39) && (calc >=16.1 && calc<=19.4)) {
+			}else if ((edad>=19 && edad<=24) && (calc >=21 && calc<=26)) {
 
-				estadoFisico = "Su estado físico es Óptimo";
+				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=40 && edad<=44) && (calc >=17.5 && calc<=20.5)) {
+			}else if ((edad>=25 && edad<=34) && (calc >=22 && calc<=27)) {
 
-				estadoFisico = "Su estado físico es Óptimo";
+				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=45 && edad<=49) && (calc >=18.6 && calc<=21.5)) {
+			}else if ((edad>=35 && edad<=54) && (calc >=23 && calc<=38)) {
 
-				estadoFisico = "Su estado físico es Óptimo";
+				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=50 && edad<=54) && (calc>=19.8 && calc<=22.7)) {
+			}else if ((edad>=55 && edad<=64) && (calc>=24 && calc<=29)) {
 
-				estadoFisico = "Su estado físico es Óptimo";
+				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=55 && edad<=59) && (calc>=20.2 && calc<=23.2)) {
+			}else if ((edad>=65 && edad<=90) && (calc>=25 && calc<=30)) { 
 
-				estadoFisico = "Su estado físico es Óptimo";
+				estadoFisico = "Su estado físico es Ideal";
 
-			}else if ((edad>=60) && (calc>=20.3 && calc<=23.5)) {
+			}else
 
-				estadoFisico = "Su estado físico es Óptimo";
+				estadoFisico = "Su estado físico no es Ideal";
 
-			}else if ((edad>=19 && edad<=24) && (calc>14.9 && calc<=19)) {
+		}else //Peso ideal Mujeres
 
-				estadoFisico = "Su estado físico es Bueno";
+			if ((edad>=16 && edad<=17) && (calc>=19 && calc<=24)) {
 
-			}else if ((edad>=25 && edad<=29) && (calc>16.5 && calc<=20.3)) {
+				estadoFisico = "Su estado físico es Ideal";
 
-				estadoFisico = "Su estado físico es Bueno";
+			}else if ((edad>=18) && (calc>=19 && calc<=24)) {
 
-			}else if ((edad>=30 && edad<=34) && (calc>18 && calc<=21.5)) {
+				estadoFisico = "Su estado físico es Ideal";
 
-				estadoFisico = "Su estado físico es Bueno";
+			}else if((edad>=19 && edad<=24) && (calc>=19 && calc<=24)) {
 
-			}else if ((edad>=35 && edad<=39) && (calc>19.4 && calc<=22.6)) {
+				estadoFisico = "Su estado físico es Ideal";
 
-				estadoFisico = "Su estado físico es Bueno";
+			}else if ((edad>=25 && edad<=34) && (calc>=20 && calc<=25)) {
 
-			}else if ((edad>=40 && edad<=44) && (calc>20.5 && calc<=23.6)) {
+				estadoFisico = "Su estado físico es Ideal";
 
-				estadoFisico = "Su estado físico es Bueno";
+			}else if ((edad>=35 && edad<=44) && (calc>=21 && calc<=26)) {
 
-			}else if ((edad>=45 && edad<=49) && (calc>21.5 && calc<=24.5)) {
+				estadoFisico = "Su estado físico es Ideal";
 
-				estadoFisico = "Su estado físico es Bueno";
+			}else if ((edad>=45 && edad<=54) && (calc>=22 && calc<=27)) {
 
-			}else if ((edad>=50 && edad<=54) && (calc>22.7 && calc<=25.6)) {
+				estadoFisico = "Su estado físico es Ideal";
 
-				estadoFisico = "Su estado físico es Bueno";
+			}else if ((edad>=55 && edad<=64) && (calc>=23 && calc<=28)) {
 
-			}else if ((edad>=55 && edad<=59) && (calc>23.2 && calc<=26.2)) {
+				estadoFisico = "Su estado físico es Ideal";
 
-				estadoFisico = "Su estado físico es Bueno";
+			}else if ((edad>=65 && edad<=90) && (calc>=25 && calc<=30)) {
 
-			}else if ((edad>=60) && (calc>23.2 && calc<=26.7)) {
+				estadoFisico = "Su estado físico es Ideal";
 
-				estadoFisico = "Su estado físico es Bueno";
+			}else
 
-			}else if ((edad>=19 && edad<=24) && (calc>23)) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if ((edad>=25 && edad<=29) && (calc>24.4)) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if ((edad>=30 && edad<=34) && (calc>25.2)) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if ((edad>=35 && edad<=39) && (calc>26.1)) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if ((edad>=40 && edad<=44) && (calc>26.9)) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if ((edad>=45 && edad<=49) && (calc>27.6)) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if ((edad>=50 && edad<=54) && (calc>28.7)) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if ((edad>=55 && edad<=59) && (calc>29.3)) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if ((edad>=60) && (calc>29.8)) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if (edad<19) {
-				
-				estadoFisico = "¡ERROR: Solo funciona con personas de 19 años o más!";
-				
-			}
-
-		}else 
-
-			if (edad>=19 && edad<=24 && calc>=18.9 && calc<=22.1) {
-
-				estadoFisico = "Su estado físico es Óptimo";
-
-			}else if (edad>=25 && edad<=29 && calc>=18.9 && calc<=22) {
-
-				estadoFisico = "Su estado físico es Óptimo";
-
-			}else if(edad>=30 && edad<=34 && calc>=19.7 && calc<=22.7) {
-
-				estadoFisico = "Su estado físico es Óptimo";
-
-			}else if (edad>=35 && edad<=39 && calc >=21 && calc<=24) {
-
-				estadoFisico = "Su estado físico es Óptimo";
-
-			}else if (edad>=40 && edad<=44 && calc >=22.6 && calc<=25.6) {
-
-				estadoFisico = "Su estado físico es Óptimo";
-
-			}else if (edad>=45 && edad<=49 && calc >=24.3 && calc<=27.3) {
-
-				estadoFisico = "Su estado físico es Óptimo";
-
-			}else if (edad>=50 && edad<=54 && calc>=26.6 && calc<=29.7) {
-
-				estadoFisico = "Su estado físico es Óptimo";
-
-			}else if (edad>=55 && edad<=59 && calc>=27.4 && calc<=30.7) {
-
-				estadoFisico = "Su estado físico es Óptimo";
-
-			}else if (edad>=60 && calc>=27.6 && calc<=31) {
-
-				estadoFisico = "Su estado físico es Óptimo";
-
-			}else if (edad>=19 && edad<=24 && calc>22.1 && calc<=25) {
-
-				estadoFisico = "Su estado físico es Bueno";
-
-			}else if (edad>=25 && edad<=29 && calc>22 && calc<=25.4) {
-
-				estadoFisico = "Su estado físico es Bueno";
-
-			}else if (edad>=30 && edad<=34 && calc>22.7 && calc<=26.4) {
-
-				estadoFisico = "Su estado físico es Bueno";
-
-			}else if (edad>=35 && edad<=39 && calc>24 && calc<=27.7) {
-
-				estadoFisico = "Su estado físico es Bueno";
-
-			}else if (edad>=40 && edad<=44 && calc>25.6 && calc<=29.3) {
-
-				estadoFisico = "Su estado físico es Bueno";
-
-			}else if (edad>=45 &&edad <=49 && calc>27.3 && calc<=30.9) {
-
-				estadoFisico = "Su estado físico es Bueno";
-
-			}else if (edad>=50 && edad<=54 && calc>29.7 && calc<=33.1) {
-
-				estadoFisico = "Su estado físico es Bueno";
-
-			}else if (edad>=55 && edad<=59 && calc>30.7 && calc<=34) {
-
-				estadoFisico = "Su estado físico es Bueno";
-
-			}else if (edad>=60 && calc>31 && calc<=34.4) {
-
-				estadoFisico = "Su estado físico es Bueno";
-
-			}else if (edad>=19 && edad<=24 && calc>29.6) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if (edad>=25 && edad<=29 && calc>29.8) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if (edad>=30 && edad<=34 && calc>30.5) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if (edad>=35 && edad<=39 && calc>31.5) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if (edad>=40 && edad <=44 && calc>32.8) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if (edad>=45 && edad<=49 && calc>34.1) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if (edad>=50 && edad<=54 && calc>36.2) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if (edad>=55 && edad<=59 && calc>37.3) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if (edad>=60 && calc>38) {
-
-				estadoFisico = "Su estado físico es Malo (Obesidad)";
-
-			}else if (edad<19) {
-				
-				estadoFisico = "¡ERROR: Solo funciona con personas de 19 años o más!";
-				
-			}
+				estadoFisico = "Su estado físico no es Ideal";
 
 		return estadoFisico;
+	}
+
+	public static String imc_persona(int altura, int peso) { //Clasificación imc según la persona
+
+		String imc_persona = "";
+
+		double calc= imc(altura, peso);
+
+		if (calc < 16) {
+
+			imc_persona = "Delgadez Severa";
+
+		}else if (calc < 16 && calc <= 17) {
+
+			imc_persona = "Delgadez Moderada";
+
+		}else 	if (calc >= 17 && calc <= 18.5) {
+
+			imc_persona = "Delgadez Leve";
+
+		}else 	if (calc >= 18.5 && calc <= 24.9) {
+
+			imc_persona = "Peso Normal";
+
+		}else 	if (calc >= 25 && calc <= 29.9) {
+
+			imc_persona = "Pre-Obeso";
+
+		}else 	if (calc >= 30 && calc <= 34.9) {
+
+			imc_persona = "Obesidad Tipo I";
+
+		}else 	if (calc >= 35 && calc <= 39.9) {
+
+			imc_persona = "Obesidad Tipo II";
+
+		}else	if (calc >= 40) {
+
+			imc_persona = "Obesidad Tipo III";
+
+		}
+
+		return imc_persona;
+
 	}
 
 

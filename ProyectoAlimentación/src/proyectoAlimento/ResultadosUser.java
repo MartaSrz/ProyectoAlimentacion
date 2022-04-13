@@ -53,14 +53,20 @@ public class ResultadosUser {
 		
 		JLabel lblInfopeso = new JLabel("Sobre su peso:");
 		lblInfopeso.setFont(new Font("Dialog", Font.BOLD, 16));
-		lblInfopeso.setBounds(33, 466, 118, 17);
+		lblInfopeso.setBounds(34, 436, 118, 17);
 		frame.getContentPane().add(lblInfopeso);
 		
 		JLabel lblcualessupeso = new JLabel("");
 		lblcualessupeso.setFont(new Font("Dialog", Font.PLAIN, 16));
-		lblcualessupeso.setBounds(151, 466, 480, 17);
+		lblcualessupeso.setBounds(151, 436, 558, 17);
 		frame.getContentPane().add(lblcualessupeso);
-		lblcualessupeso.setText("Hola " + usuario.getNombre() + ", " + Imc.peso_ideal(usuario.getEdad(), usuario.getAltura(), usuario.getPeso(), usuario.getSexo()));
+		lblcualessupeso.setText("Hola " + usuario.getNombre() + ". " + Imc.peso_ideal(usuario.getEdad(), usuario.getAltura(), usuario.getPeso(), usuario.getSexo()));
+		
+		JLabel lblimc_persona = new JLabel("");
+		lblimc_persona.setFont(new Font("Dialog", Font.PLAIN, 16));
+		lblimc_persona.setBounds(151, 465, 455, 17);
+		frame.getContentPane().add(lblimc_persona);
+		lblimc_persona.setText(Imc.imc_persona(usuario.getAltura(), usuario.getPeso()));
 		
 	}
 }
