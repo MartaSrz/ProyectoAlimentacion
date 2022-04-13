@@ -12,6 +12,14 @@ public class Persona {
 	private int altura;
 	private int edad;
 	
+	/**
+	 * @param nombre - nombre de la persona
+	 * @param sexo - sexo de la persona
+	 * @param peso - peso de la persona en kg
+	 * @param altura - altura de la persona en cm
+	 * @param edad - edad de la persona en años
+	 */
+	
 	//CONSTRUCTOR--------------------------------------------
 	public Persona(String nombre, String sexo, int peso, int altura, int edad) {
 		super();
