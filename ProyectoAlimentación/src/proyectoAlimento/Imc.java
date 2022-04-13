@@ -1,9 +1,16 @@
 package proyectoAlimento;
 
-public class Imc {
+/**
+ * 
+ * Clase que te indica si te encuentras en tu peso ideal y tu estado físico.
+ * @author marcre
+ *
+ */
 
-	public static double imc(int altura, int peso) { //Calculo del imc de una persona
+public class Imc {	
 
+	public static double imc(int altura, int peso) { 
+		
 		double alt = (double) altura/100;
 		
 		double calculo = peso/Math.pow(alt, 2);
@@ -11,8 +18,17 @@ public class Imc {
 		return calculo;
 
 	}
+	
+	/**
+	 * Según el imc, mostraremos si el usuario se encuentra en el peso ideal seas hombre o mujer.
+	 * @param edad: Valor de la edad de la persona en años
+	 * @param altura: Valor de la altura de la persona en cm
+	 * @param peso: Valor del peso de la persona en kg
+	 * @param sexo: Género de la persona (Hombre o Mujer)
+	 * @return
+	 */
 
-	public static String peso_ideal(int edad, int altura, int peso, String sexo) { //Según el imc, mostraremos si el usuario se encuentra en el peso ideal seas hombre o mujer
+	public static String peso_ideal(int edad, int altura, int peso, String sexo) { 
 
 		String estadoFisico = "";
 
@@ -96,9 +112,9 @@ public class Imc {
 
 		return estadoFisico;
 	}
+	
 
-	public static String imc_persona(int altura, int peso) { //Clasificación de la persona según el imc
-
+	public static String imc_persona(int altura, int peso) { 
 		String imc_persona = "";
 
 		double calc= imc(altura, peso);
