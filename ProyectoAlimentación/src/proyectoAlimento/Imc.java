@@ -97,7 +97,7 @@ public class Imc {
 		return estadoFisico;
 	}
 
-	public static String imc_persona(int altura, int peso) { //Clasificación imc según la persona
+	public static String imc_persona(int altura, int peso) { //Clasificación de la persona según el imc
 
 		String imc_persona = "";
 
