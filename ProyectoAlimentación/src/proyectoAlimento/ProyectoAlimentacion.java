@@ -1,3 +1,8 @@
+/*Clase Main.
+ *Esta clase ha sido creada para pedirle la información necesaria al usuario, la cual
+ *será clave para calcular el resultado final. eEsta inforrmación será mandada a la clase persona.
+ */
+
 package proyectoAlimento;
 
 import java.awt.EventQueue;
@@ -23,7 +28,7 @@ import javax.swing.JTextPane;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class DatosUsuario{
+public class ProyectoAlimentacion{
 
 	private JFrame frame;
 	private JTextField txtNombre;
@@ -41,7 +46,7 @@ public class DatosUsuario{
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					DatosUsuario window = new DatosUsuario();
+					ProyectoAlimentacion window = new ProyectoAlimentacion();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -53,7 +58,7 @@ public class DatosUsuario{
 	/**
 	 * Create the application.
 	 */
-	public DatosUsuario() {
+	public ProyectoAlimentacion() {
 		initialize();
 
 
@@ -190,7 +195,7 @@ public class DatosUsuario{
 		frame.getContentPane().add(lblcm);
 
 		JButton btnRestablecer = new JButton("Restablecer");
-		JButton btnContinuar = new JButton("Continuar");  // Botón que cierra la primera ventana y abre la segunda
+		JButton btnContinuar = new JButton("Continuar");  /*Botón que cierra la primera ventana y abre la segunda*/
 
 		JLabel lblErrorNombre = new JLabel();
 		lblErrorNombre.setForeground(Color.RED);
@@ -258,12 +263,12 @@ public class DatosUsuario{
 					String sexo = "Hombre";
 					if (rdbtnMujer.isSelected()) 
 						sexo="Mujer";
-					int peso= Integer.parseInt(spinner_peso.getValue().toString()); //obtenemos los valores del usuario para devolverlos mediante el constructor de la otra ventana
+					int peso= Integer.parseInt(spinner_peso.getValue().toString()); /*obtenemos los valores del usuario para devolverlos mediante el constructor de la otra ventana (ValoresNutritivos)*/
 					int altura= Integer.parseInt(spinner_altura.getValue().toString());
 					int edad= Integer.parseInt(spinner_anyos.getValue().toString());
-					Persona usuario = new Persona(txtNombre.getText(), sexo, peso , altura, edad); //Objeto de tipo persona con los datos del usuario
-					frame.setVisible(false); //Se cierra la ventana inicial
-					CalculoNutritivo.arrancar(usuario); //Se arranca la otra ventana pasandole como parametro el objeto de tipo Persona
+					Persona usuario = new Persona(txtNombre.getText(), sexo, peso , altura, edad); /*Objeto de tipo persona con los datos del usuario*/
+					frame.setVisible(false); /*Se cierra la ventana inicial*/
+					ValoresNutritivos.arrancar(usuario); /*Se arranca ValoresNutritivos pasándole como parametro el objeto de tipo Persona*/
 				}
 			}
 		});

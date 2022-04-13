@@ -1,3 +1,8 @@
+/*Clase llamada por ValoresNutritivos.
+ *Esta clase ha sido creada para mostrar los resultados finales al user.
+ */
+
+
 package proyectoAlimento;
 
 import java.awt.EventQueue;
@@ -15,7 +20,7 @@ public class ResultadosUser {
 	/**
 	 * Launch the application.
 	 */
-	public static void resultados(Persona usuario) { //accción para arrancar la tercera ventana
+	public static void resultados(Persona usuario) { /*accción para arrancar la tercera ventana*/
 		ResultadosUser.usuario=usuario;
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
