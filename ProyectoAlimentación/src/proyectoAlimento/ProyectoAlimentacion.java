@@ -103,13 +103,14 @@ public class ProyectoAlimentacion{
 		lblSexo.setBounds(121, 203, 60, 17);
 		frame.getContentPane().add(lblSexo);
 
-		JRadioButton rdbtnMujer = new JRadioButton("Mujer");		
+		JRadioButton rdbtnMujer = new JRadioButton("Mujer");
 		rdbtnMujer.setFont(new Font("Dialog", Font.PLAIN, 16));
 		rdbtnMujer.setBackground(FONDO_COLOR);
 		rdbtnMujer.setBounds(165, 228, 130, 25);
 		frame.getContentPane().add(rdbtnMujer);
 
 		JRadioButton rdbtnHombre = new JRadioButton("Hombre");
+		rdbtnHombre.setSelected(true);
 		rdbtnHombre.setFont(new Font("Dialog", Font.PLAIN, 16));
 		rdbtnHombre.setBackground(FONDO_COLOR);
 		rdbtnHombre.setBounds(165, 264, 130, 25);
@@ -238,7 +239,7 @@ public class ProyectoAlimentacion{
 				spinner_anyos.setValue(18);             
 				spinner_peso.setValue(70);
 				spinner_altura.setValue(160);
-				grupoRadioBotones.clearSelection();
+				rdbtnHombre.setSelected(true);
 				
 				lblErrorNombre.setText("");
 				lblErrorSexo.setText("");
@@ -255,9 +256,6 @@ public class ProyectoAlimentacion{
 				if (txtNombre.getText().equals("") || txtNombre.getText().equals(DEFECTO_TXTNOMBRE)) {
 					lblErrorSexo.setText("");
 					lblErrorNombre.setText("Pon tu nombre porfavor :D");
-				}else if (!rdbtnMujer.isSelected() && !rdbtnHombre.isSelected()) {
-					lblErrorNombre.setText("");
-					lblErrorSexo.setText("Necesitamos que indiques tu sexo para poder hacer los cálculos");
 				}else {
 					lblErrorNombre.setText("");
 					lblErrorSexo.setText("");

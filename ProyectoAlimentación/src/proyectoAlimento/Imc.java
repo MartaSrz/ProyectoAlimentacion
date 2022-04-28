@@ -20,7 +20,7 @@ public class Imc {
 	}
 	
 	/**
-	 * Según el imc, mostraremos si el usuario se encuentra en el peso ideal seas hombre o mujer.
+	 * Según el imc, mostraremos si el usuario se encuentra en el peso ideal, ya seas hombre o mujer.
 	 * @param edad: Valor de la edad de la persona en años
 	 * @param altura: Valor de la altura de la persona en cm
 	 * @param peso: Valor del peso de la persona en kg
@@ -112,6 +112,13 @@ public class Imc {
 
 		return estadoFisico;
 	}
+	
+	/**
+	 * Según el resultado del cálculo del imc mostraremos el estado físico de la persona
+	 * @param altura: Valor de la altura de la persona en cm
+	 * @param peso: Valor del peso de la persona en kg
+	 * @return
+	 */
 	
 
 	public static String imc_persona(int altura, int peso) { 
