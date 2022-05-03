@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>img/cuadrantesEstadoFisico.png</name>
+			<type>1</type>
+			<location>C:/Users/msm20/OneDrive/Escritorio/img/unnamed.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>
