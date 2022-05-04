@@ -73,7 +73,7 @@ public class ResultadosUser {
 		textAreaCualEsSuPeso.setEditable(false);
 		textAreaCualEsSuPeso.setBounds(596, 108, 228, 129);
 		frame.getContentPane().add(textAreaCualEsSuPeso);
-		textAreaCualEsSuPeso.setText("¡Hola " + usuario.getNombre()+"!\n");
+		textAreaCualEsSuPeso.setText("ï¿½Hola " + usuario.getNombre()+"!\n");
 		textAreaCualEsSuPeso.append(Imc.calcular_peso_ideal(usuario.getEdad(), usuario.getAltura(), usuario.getPeso(), usuario.getSexo())+"\n\n");
 		textAreaCualEsSuPeso.append(Imc.imc_persona(usuario.getAltura(), usuario.getPeso()));
 		
@@ -82,7 +82,7 @@ public class ResultadosUser {
 		lblReferenciaImagen.setBounds(45, 76, 512, 17);
 		frame.getContentPane().add(lblReferenciaImagen);
 		
-		//Creamos el objeto(JPG de cualquier tamaño)
-        ImageIcon imagen1=new ImageIcon("imagenes"+File.separator+"unamed.png");
+		//Creamos el objeto(JPG de cualquier tamaï¿½o)
+        ImageIcon estadoFisico=new ImageIcon("img/estadoFisico.png");
 	}
 }
