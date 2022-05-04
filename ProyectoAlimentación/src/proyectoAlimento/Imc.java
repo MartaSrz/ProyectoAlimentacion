@@ -36,15 +36,7 @@ public class Imc {
 
 		if (sexo.equals("Hombre")) { 
 
-			if ((edad==16) && (calculo_imc>=19 && calculo_imc<=24)) { //Peso ideal Hombres
-
-				estadoFisico = "Su estado físico es Ideal";
-
-			}else if ((edad==17) && (calculo_imc>=20 && calculo_imc<=25)) {
-
-				estadoFisico = "Su estado físico es Ideal";
-
-			}else if((edad==18) && (calculo_imc>=20 && calculo_imc<=25)) {
+			if (((edad==16) && (calculo_imc>=19 && calculo_imc<=24)) || ((edad==17 || edad==18) && (calculo_imc>=20 && calculo_imc<=25))) { //Peso ideal Hombres
 
 				estadoFisico = "Su estado físico es Ideal";
 
@@ -74,15 +66,7 @@ public class Imc {
 
 		}else //Peso ideal Mujeres
 
-			if ((edad>=16 && edad<=17) && (calculo_imc>=19 && calculo_imc<=24)) {
-
-				estadoFisico = "Su estado físico es Ideal";
-
-			}else if ((edad>=18) && (calculo_imc>=19 && calculo_imc<=24)) {
-
-				estadoFisico = "Su estado físico es Ideal";
-
-			}else if((edad>=19 && edad<=24) && (calculo_imc>=19 && calculo_imc<=24)) {
+			if ((edad>=16 && edad<=24) && (calculo_imc>=19 && calculo_imc<=24)) {
 
 				estadoFisico = "Su estado físico es Ideal";
 
@@ -122,10 +106,11 @@ public class Imc {
 	
 
 	public static String imc_persona(int altura, int peso) { 
+		
 		String imc_persona = "";
 
 		double calculo_imc= calcular_imc(altura, peso);
-
+		
 		if (calculo_imc < 16) {
 
 			imc_persona = "Delgadez Severa";
@@ -165,12 +150,4 @@ public class Imc {
 	}
 
 
-
-
-
-
 }
-
-
-
-

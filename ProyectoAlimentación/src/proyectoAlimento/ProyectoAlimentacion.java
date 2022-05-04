@@ -135,7 +135,7 @@ public class ProyectoAlimentacion{
 		JSpinner spinner_anyos = new JSpinner();
 		spinner_anyos.setBackground(new Color(0, 0, 0));
 		spinner_anyos.setForeground(new Color(0, 0, 0));
-		spinner_anyos.setModel(new SpinnerNumberModel(new Integer(18), new Integer(0), null, new Integer(1)));
+		spinner_anyos.setModel(new SpinnerNumberModel(18, 0, 90, 1));
 		spinner_anyos.setValue(18);
 		spinner_anyos.setFont(new Font("Dialog", Font.PLAIN, 16));
 		spinner_anyos.setBounds(165, 362, 91, 22);
